@@ -10,5 +10,6 @@ class RingBuffer:
         if self.current == self.capacity:
             self.current = 0
 
+
     def get(self):
         return [i for i in self.buffer if i is not None] 
