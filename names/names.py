@@ -18,6 +18,7 @@ duplicates = []  # Return the list of duplicates in this data structure
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
+
 # our Binary Search Tree from this week has a module contains...
 # this allows us to search whether a value or input is in the bst
 # if we move all the names from one list to their own search trees
@@ -33,6 +34,17 @@ for i in names_1:
 for i in names_2:
     if BST_names_1.contains(i) is True:
         duplicates.append(i)
+
+duplicates = sorted(duplicates)
+
+# # stretch using only arrays...not using our imported BSTNode Class.
+# # can this reach a similar efficiency? using BST we were around a runtime of 0.105 seconds
+# # this runs in about .63 seconds if not sorting the list, and .95 seconds if sorting. Not faster, but no need
+# # to create a whole new class to implement. 
+
+# unique_names = set(names_2+names_1)
+
+# duplicates = sorted([i for i in names_1 if i in names_1 and i in names_2])
 
 
 end_time = time.time()
